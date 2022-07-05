@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Form } from "./form.jsx"
 import Stopwatch from "./stopwatch"
-import "../App.css";
+import "../styles/App.css";
 
 const Home = () => {
     const [isStopWatch, setIsStopWatch] = useState(false);
@@ -15,7 +15,7 @@ const Home = () => {
     };
 
     return(
-        <div>
+        <div className="bg-slate-50 py-10">
             {isStopWatch ? (
                 isStart ? (
                     <Stopwatch

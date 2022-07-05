@@ -3,7 +3,14 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@700&display=swap');
 
-.header-title{
+html{
     font-family: 'Arima', cursive;
 }
 
+.timer{
+    font-size: 150px;
+}
+
+span{
+    font-size: 42px;
+}

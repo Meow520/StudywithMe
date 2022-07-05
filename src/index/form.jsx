@@ -1,9 +1,9 @@
-import "../App.css";
+import "../styles/App.css";
 import React from "react";
 
 export const Form = ({ handleStart, subject, task, setSubject, setTask }) => {
   return (
-    <div className="w-3/4 mx-auto rounded-2xl max-w-3xl border-2 my-6">
+    <div className="w-3/4 mx-auto rounded-2xl max-w-3xl border-2 bg-white">
       <div className="text-center shadow-cyan-100 p-10">
         <p className="font-bold text-4xl">Let's Get Study!</p>
       </div>
@@ -11,10 +11,10 @@ export const Form = ({ handleStart, subject, task, setSubject, setTask }) => {
       <div className="text-center">
         {/* 科目取得 */}
         <div className="py-5">
-          <div className="bg-cyan-500 p-3 text-2xl">科目</div>
+          <div className="bg-emerald-200 text-emerald-800 p-3 text-2xl">Subject</div>
           <input
             type="text"
-            placeholder="科目名"
+            placeholder="subject name"
             value={subject}
             className="my-4 h-12 text-2xl border rounded-lg "
             onChange={(a) => {
@@ -25,10 +25,10 @@ export const Form = ({ handleStart, subject, task, setSubject, setTask }) => {
         </div>
         {/* タスク取得 */}
         <div className="py-5">
-          <div className="bg-cyan-500 p-3 text-2xl">タスク</div>
+          <div className=" bg-emerald-200 text-emerald-800 p-3 text-2xl">Task</div>
           <input
             type="text"
-            placeholder="タスク名"
+            placeholder="task name"
             value={task}
             className="my-4 h-12 text-2xl border rounded-lg"
             onChange={(b) => {
@@ -44,7 +44,7 @@ export const Form = ({ handleStart, subject, task, setSubject, setTask }) => {
             onClick={() => {
               handleStart(subject, task);
             }}
-            className="bg-cyan-600 px-16 py-4 text-white text-2xl rounded-lg"
+            className="bg-emerald-600 hover:bg-emerald-400 px-16 py-4 text-emerald-50 text-2xl rounded-lg"
             value="Submit"
             id="submit-bg"
           >
