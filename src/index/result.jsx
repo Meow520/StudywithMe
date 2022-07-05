@@ -10,9 +10,7 @@ export const Result = ({
   task,
   minutes,
   hours,
-  sumTime,
 }) => {
-  const [studyList, setStudyList] = useState([]);
 
   return (
     <div className="text-center py-10">
@@ -32,7 +30,7 @@ export const Result = ({
         {/* <h3>
           studing time : <span>{sumTime}</span>
         </h3> */}
-        <div className="align-middle">
+        <div className="align-middle py-8">
           <a
             href="/"
             className="bg-emerald-600 hover:bg-emerald-400 px-16 py-4 text-emerald-50 text-2xl rounded-lg mx-3"
@@ -40,10 +38,10 @@ export const Result = ({
             study other subject
           </a>
           <a
-            href="/studylist"
+            href="/studyplanner"
             className="bg-emerald-600 hover:bg-emerald-400 px-16 py-4 text-emerald-50 text-2xl rounded-lg mx-3"
           >
-            see all tasks you have done today
+            Study Planner
           </a>
         </div>
       </div>

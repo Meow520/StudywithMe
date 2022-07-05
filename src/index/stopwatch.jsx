@@ -10,13 +10,21 @@ const Stopwatch = ({ subject, task, setSubject, setTask, setStart }) => {
     useStopwatch({ autoStart: true });
   const [isStop, setStop] = useState(0);
   const [isResult, setIsResult] = useState(false);
-  const [sumTime, setSumTime] = useState(0);
+  const [studyList, setStudyList] = useState([]);
 
-  const handleEnd = () => {
+  const handleEnd = ({ subject, task, hours, minutes }) => {
     pause(true);
     setIsResult(true);
     setStop(true);
-    // setSumTime(sumTime + minutes + 60 * hours);
+    setStudyList([
+      ...studyList,
+      {
+        subject: { subject },
+        task: { task },
+        time: { minutes } + { hours } * 60,
+      },
+    ]);
+    console.log({ task });
   };
 
   return (
@@ -50,20 +58,18 @@ const Stopwatch = ({ subject, task, setSubject, setTask, setStart }) => {
             <span className="timer"> {seconds}</span> s
           </div>
           <div className="text-3xl pb-10">
-            <div className="w-64 mx-auto">
+            <div className="w-80 mx-auto">
               <Lottie animationData={animationData} loop={true} />
             </div>
-            <div>
+            <div className="pt-10">
               <button
                 type="submit"
                 className="bg-emerald-600 hover:bg-emerald-400 px-16 py-4 text-white text-2xl rounded-lg"
-                onClick={() =>
-                  handleEnd(subject, task, hours, minutes, sumTime)
-                }
+                onClick={() => handleEnd(subject, task, hours, minutes)}
                 value="Submit"
                 id="submit-bg"
               >
-                Finish!
+                Done!
               </button>
             </div>
           </div>

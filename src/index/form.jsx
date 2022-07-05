@@ -5,7 +5,7 @@ export const Form = ({ handleStart, subject, task, setSubject, setTask }) => {
   return (
     <div className="w-3/4 mx-auto rounded-2xl max-w-3xl border-2 bg-white">
       <div className="text-center shadow-cyan-100 p-10">
-        <p className="font-bold text-4xl">Let's Get Study!</p>
+        <p className="font-bold text-4xl">Let's Get Studing!</p>
       </div>
 
       <div className="text-center">
