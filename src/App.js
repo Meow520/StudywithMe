@@ -1,10 +1,9 @@
 import "./styles/App.css";
-import Home from "./index/home";
-import { About } from "./about/about.jsx";
-import { StudyPlanner } from "./index/studyplanner";
 import { Header } from "./layouts/header.jsx";
 import { Footer } from "./layouts/footer.jsx";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./index/home/home";
+import {About} from "./about/about"
 
 function App() {
   return (
@@ -13,9 +12,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/studyplanner" element={<StudyPlanner/>}/>
+          <Route path="/about" element={<About />} />
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </div>

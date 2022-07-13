@@ -35,13 +35,6 @@ export default (props) => {
       >
         About
       </Link>
-      <Link
-        to="/studyplanner"
-        className="menu-items text-base sm:text-2xl py-3 hover:bg-emerald-200"
-        onClick={closeSideBar}
-      >
-        Study Planner
-      </Link>
     </Menu>
   );
 };

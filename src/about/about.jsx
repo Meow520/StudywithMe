@@ -27,22 +27,10 @@ export const About = () => {
           <div className="py-3">
             <h3 className="text-3xl text-emerald-700 py-3">Result</h3>
             <p className="text-xl py-3 ">
-              On here, you can see the information of the current task.
+              On here, you can see the information of the current tasks.
               <br />
-              If you want to study more, push "study more". <br />
-              Otherwise, if you want to quit studing or see all tasks of the
-              day, push "Study Planner" button.
-            </p>
-          </div>
-          <div className="py-3">
-            <h3 className="text-3xl text-emerald-700 py-3">Study Planner</h3>
-            <p className="text-xl py-3 ">
-              On here, you can see all tasks of the day. <br />
-              Also, you can create a pdf file which contains the information of
-              all tasks and reset them. <br />
-              If you want to create a pdf file, push "Create a pdf file" button.{" "}
-              <br />
-              After pushing this button, all of the tasks will destroy.
+              Also, you can save a pdf file which contains the information of tasks.
+
             </p>
           </div>
         </div>
@@ -111,7 +99,11 @@ export const About = () => {
                           >
                             Meow520
                           </a>
-                          <img src={Meow520} alt="Meow520" className="w-8 h-8 my-auto mx-4"/>
+                          <img
+                            src={Meow520}
+                            alt="Meow520"
+                            className="w-8 h-8 my-auto mx-4"
+                          />
                         </div>
                       </div>
                     </div>
