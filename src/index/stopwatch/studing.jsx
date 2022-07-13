@@ -8,7 +8,7 @@ const Studing = ({ studyInfo, toggleList }) => {
 
     return (
       <div className="flex justify-center h-16 my-5">
-        <div className="border rounded-lg border-r shadow-lg bg-white w-96 flex">
+        <div className="border rounded-lg border-r shadow-lg bg-white w-2/5 flex">
           <label className="px-3 my-auto">
             <input
               type="checkbox"
