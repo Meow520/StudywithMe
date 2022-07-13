@@ -1,6 +1,6 @@
 import "../../styles/App.css";
 import StudyCompletedList from "./studycompletedlist";
-// import Twitter from "../../images/";
+import Twitter from "../../images/twitter_logo.png";
 
 
 const Result = ({
@@ -27,7 +27,14 @@ const Result = ({
 
       <StudyCompletedList studyList={studyList} />
 
-      
+      <div className="object-center my-10">
+            <a
+              href={`http://twitter.com/share?url=study-with-me-beta.vercel.app&text=今日は${sumh}時間${summin}分勉強しました。%0A%0A${studyList}&hashtags=StudywithMe`}
+              target="_blank"
+            >
+              <img src={Twitter} className="mx-auto max-h-8 max-w-md"></img>
+            </a>
+          </div>
       <div className="py-5">
         <button
           onClick={handleReset}
