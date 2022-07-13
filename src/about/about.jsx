@@ -14,23 +14,29 @@ export const About = () => {
             <h3 className="text-3xl text-emerald-700 py-3">Home</h3>
             <p className="text-xl py-3 ">
               On here, you may enter a task and the subjects of the task. <br />
+              If you want to delete all tasks, push "Clear" button. <br />
               Then, you may push "Start!" button and start counitng time.
             </p>
           </div>
           <div className="py-3">
             <h3 className="text-3xl text-emerald-700 py-3">Timer</h3>
             <p className="text-xl py-3 ">
-              On here, you have to study. <br />
-              If you finish the task, push "Done!" button!
+              On here, you have to study.
+              <br />
+              If you have done a task, check the task, and then, the timer will
+              restart.
+              <br />
+              If you finish all tasks, push "Done!" button!
             </p>
           </div>
           <div className="py-3">
             <h3 className="text-3xl text-emerald-700 py-3">Result</h3>
             <p className="text-xl py-3 ">
-              On here, you can see the information of the current tasks.
+              On here, you can see the information of the current task.
               <br />
-              Also, you can save a pdf file which contains the information of tasks.
-
+              If you want to share on your twitter account, push twitter bird.
+              <br />
+              Also you can go the main page when you push "reset" button.
             </p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import "../../styles/App.css";
 import StudyCompletedList from "./studycompletedlist";
 import Twitter from "../../images/twitter_logo.png";
-
+import { useState } from "react";
 
 const Result = ({
   studyList,
@@ -17,6 +17,9 @@ const Result = ({
     setIsStopWatch(false);
   };
 
+
+
+
   return (
     <div className="text-center py-10">
       <h2 className="text-6xl">Well done!</h2>
@@ -28,13 +31,13 @@ const Result = ({
       <StudyCompletedList studyList={studyList} />
 
       <div className="object-center my-10">
-            <a
-              href={`http://twitter.com/share?url=study-with-me-beta.vercel.app&text=今日は${sumh}時間${summin}分勉強しました。%0A%0A${studyList}&hashtags=StudywithMe`}
-              target="_blank"
-            >
-              <img src={Twitter} className="mx-auto max-h-8 max-w-md"></img>
-            </a>
-          </div>
+        <a
+          href={`http://twitter.com/share?url=study-with-me-beta.vercel.app&text=今日は${sumh}時間${summin}分勉強しました%0A&hashtags=StudywithMe`}
+          target="_blank"
+        >
+          <img src={Twitter} className="mx-auto max-h-8 max-w-md"></img>
+        </a>
+      </div>
       <div className="py-5">
         <button
           onClick={handleReset}
@@ -43,7 +46,6 @@ const Result = ({
           Reset
         </button>
       </div>
-      
     </div>
   );
 };

@@ -64,16 +64,16 @@ const Stopwatch = ({ studyList, setStudyList, setIsStopWatch }) => {
         )
       ) : (
         <div className="text-center">
-          <div className="timer">
-            <span className="timer">{hours}</span> h
-            <span className="timer"> {minutes}</span> m
-            <span className="timer"> {seconds}</span> s
+          <div className="md:text-9xl text-7xl">
+            <span className="">{hours}</span> h
+            <span className=""> {minutes}</span> m
+            <span className=""> {seconds}</span> s
           </div>
 
           <StudingList studyList={studyList} toggleList={toggleList} />
 
           <div className="text-3xl pb-10">
-            <div className="w-80 mx-auto">
+            <div className="w-64 md:w-80 mx-auto">
               <Lottie animationData={animationData} loop={true} />
             </div>
             <div className="pt-10">
