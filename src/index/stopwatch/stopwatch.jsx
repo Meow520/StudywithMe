@@ -14,12 +14,23 @@ const Stopwatch = ({ studyList, setStudyList, setIsStopWatch }) => {
   const [isResult, setIsResult] = useState(false);
   const [summin, setSummin] = useState(0);
   const [sumh, setSumh] = useState(0);
+  const[rest, setRest] = useState("rest");
 
   const handleEnd = () => {
     pause(true);
     setIsResult(true);
     setIsStop(true);
   };
+
+  const handleRest = () => {
+    if(rest === "rest"){
+      pause(true);
+      setRest("restart");
+    }else{
+      start(true);
+      setRest("rest");
+    }
+  }
 
   const toggleList = (id) => {
     const newStudyList = [...studyList];
@@ -76,6 +87,14 @@ const Stopwatch = ({ studyList, setStudyList, setIsStopWatch }) => {
             <div className="w-64 md:w-80 mx-auto">
               <Lottie animationData={animationData} loop={true} />
             </div>
+
+            <div className="pt-10"
+            >
+              <button
+              className="bg-emerald-600 hover:bg-emerald-400 px-16 py-4 text-white text-2xl rounded-lg"
+              onClick={handleRest}>{rest}</button>
+            </div>
+
             <div className="pt-10">
               <button
                 type="submit"
